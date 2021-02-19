@@ -1,0 +1,401 @@
+* {
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0; }
+
+body {
+  overflow-x: hidden; }
+
+ul {
+  margin: 0;
+  list-style: none; }
+
+img {
+  max-width: 100%;
+  color: transparent; }
+
+form select,
+input {
+  border: 1px solid #c4c4c4;
+  border-radius: 4px;
+  height: 36px;
+  width: 100%;
+  padding: 0 0 0 12px;
+  background-color: #ffffff; }
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #3b6d9a;
+  outline: none;
+  transition: 0.3s; }
+
+button {
+  display: block;
+  background: 0 0;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  width: 100%;
+  line-height: 44px;
+  transition: 0.3s;
+  border-radius: 10px;
+  margin-bottom: 24px;
+  white-space: nowrap;
+  font-family: Roboto, sans-serif;
+  font-size: 18px; }
+
+.corona-header {
+  background-color: #d5dee1; }
+  .corona-header__nav {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 16px; }
+    .corona-header__nav--link {
+      margin: 0 auto 24px auto; }
+  .corona-header__container {
+    display: flex;
+    flex-direction: column;
+    text-align: center; }
+  .corona-header__nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .corona-header__nav-item {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 14px;
+    max-width: 120px;
+    color: #5f8b9d; }
+    .corona-header__nav-item:hover {
+      color: #374451; }
+  .corona-header__register {
+    max-width: 150px;
+    width: 100%;
+    background-color: #0297b1;
+    color: #ffffff;
+    margin: 0 auto; }
+    .corona-header__register:hover {
+      background-color: #016b7e; }
+  @media screen and (min-width: 768px) {
+    .corona-header__nav {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 40px 40px; }
+      .corona-header__nav--link {
+        margin: 0; }
+    .corona-header__container {
+      flex-direction: row;
+      align-items: center;
+      max-width: 820px;
+      width: 100%; }
+    .corona-header__nav-list {
+      flex-direction: row;
+      justify-content: space-evenly;
+      min-width: 600px;
+      width: 100%;
+      margin-right: 24px; }
+    .corona-header__nav-item {
+      margin-bottom: 0;
+      max-width: 180px; }
+    .corona-header__register {
+      max-width: 180px; } }
+.corona-banner {
+  background: url("https://via.placeholder.com/1920x700") center center;
+  padding: 300px 3% 100px 3%; }
+  .corona-banner__content {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #d5dee1;
+    border-radius: 10px;
+    padding: 50px 24px; }
+  .corona-banner__title {
+    font-size: 38px;
+    line-height: 42px;
+    color: #374451;
+    margin-bottom: 18px;
+    text-align: center; }
+  .corona-banner__subtitle {
+    font-size: 18px;
+    line-height: 26px;
+    color: #374451;
+    max-width: 370px;
+    width: 100%;
+    margin: 0 auto; }
+    .corona-banner__subtitle:not(:last-child) {
+      margin-bottom: 12px; }
+  .corona-banner .second {
+    margin-bottom: 24px; }
+  .corona-banner__prices-scroll {
+    max-width: 225px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #0297b1;
+    color: #fff;
+    padding: 6px 0;
+    font-weight: bold; }
+    .corona-banner__prices-scroll:hover {
+      background-color: #016b7e; }
+    .corona-banner__prices-scroll svg {
+      transform: rotate(90deg);
+      width: 25px;
+      height: 25px; }
+  @media screen and (min-width: 1024px) {
+    .corona-banner {
+      padding: 500px 5% 100px 5%; }
+      .corona-banner__title {
+        font-size: 42px;
+        line-height: 48px; }
+      .corona-banner__subtitle {
+        font-size: 20px;
+        line-height: 28px;
+        max-width: 411px; } }
+  @media screen and (min-width: 1366px) {
+    .corona-banner__title {
+      font-size: 46px;
+      line-height: 52px; }
+    .corona-banner__subtitle {
+      max-width: 445px; } }
+.corona-prices {
+  background-color: #ffffff;
+  padding-top: 40px; }
+  .corona-prices__title {
+    text-align: center;
+    font-size: 28px;
+    line-height: 36px;
+    color: #000000;
+    margin-bottom: 24px; }
+  .corona-prices__list {
+    display: flex;
+    flex-direction: column; }
+  .corona-prices__item {
+    background-color: #d5dee1;
+    max-width: 350px;
+    width: 95%;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.06), 0 0 2px rgba(0, 0, 0, 0.07);
+    transition: 0.3s; }
+    .corona-prices__item:hover {
+      box-shadow: 0 15px 36px rgba(0, 0, 0, 0.1); }
+    .corona-prices__item:not(:last-child) {
+      margin-bottom: 24px; }
+    .corona-prices__item-title {
+      text-align: center;
+      font-size: 20px;
+      line-height: 28px;
+      margin-bottom: 12px;
+      color: #ffffff;
+      font-weight: bold;
+      width: 100%;
+      padding: 24px 20px 24px 20px;
+      background-color: #0297b1;
+      border-radius: 10px 10px 0 0; }
+    .corona-prices__item-price {
+      text-align: center;
+      font-size: 14px;
+      line-height: 26px;
+      margin-bottom: 18px; }
+      .corona-prices__item-price--amount {
+        font-size: 26px;
+        line-height: 34px;
+        font-weight: bold;
+        color: #5f8b9d; }
+      .corona-prices__item-price--other {
+        font-style: italic;
+        color: #000000; }
+    .corona-prices__item-advantages {
+      padding: 0 24px;
+      margin: 0 auto 24px auto;
+      text-align: center;
+      color: #374451;
+      font-weight: bold; }
+  .corona-prices__advantages-item {
+    position: relative;
+    color: #374451; }
+    .corona-prices__advantages-item:not(:last-child) {
+      margin-bottom: 12px; }
+  .corona-prices__button {
+    max-width: 180px;
+    width: 100%;
+    margin: 0 auto 40px auto;
+    background-color: #0297b1;
+    color: #fff;
+    padding: 2px 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 16px; }
+    .corona-prices__button:hover {
+      background-color: #016b7e; }
+  @media screen and (min-width: 768px) {
+    .corona-prices {
+      padding-top: 60px; }
+      .corona-prices__title {
+        font-size: 32px;
+        line-height: 40px; }
+      .corona-prices__list {
+        max-width: 768px;
+        width: 100%;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center; }
+      .corona-prices__item {
+        max-width: 350px;
+        width: 45%;
+        margin: 0 auto 24px auto; }
+        .corona-prices__item:not(:last-child) {
+          margin: 0 auto 24px auto; }
+        .corona-prices__item-title {
+          font-size: 22px;
+          line-height: 30px;
+          margin-bottom: 6px; }
+        .corona-prices__item-price {
+          font-size: 14px;
+          line-height: 24px; }
+        .corona-prices__item-advantages {
+          margin-bottom: 24px;
+          height: 180px; } }
+  @media screen and (min-width: 1024px) {
+    .corona-prices__list {
+      max-width: 1900px; }
+    .corona-prices__item {
+      max-width: initial;
+      width: 22%;
+      margin: 0 12px 0 12px; }
+      .corona-prices__item-title {
+        height: 108px;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+      .corona-prices__item-advantages {
+        padding: 0 10px; }
+      .corona-prices__item:not(:last-child) {
+        margin: 0 12px 0 12px; }
+    .corona-prices__advantages-item {
+      font-size: 14px;
+      line-height: 18px; } }
+  @media screen and (min-width: 1366px) {
+    .corona-prices__item-advantages {
+      height: 220px; }
+    .corona-prices__advantages-item {
+      font-size: 18px;
+      line-height: 24px; } }
+  @media screen and (min-width: 1466px) {
+    .corona-prices__item-title {
+      height: initial; }
+    .corona-prices__item-advantages {
+      padding: 0 20px; } }
+.corona-arguments {
+  background-color: #ffffff;
+  padding: 40px 16px; }
+  .corona-arguments__container {
+    display: flex;
+    flex-direction: column; }
+  .corona-arguments__argument {
+    background-color: #e5f3f8;
+    padding: 40px 24px;
+    max-width: 350px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.06), 0 0 2px rgba(0, 0, 0, 0.07);
+    transition: 0.3s; }
+    .corona-arguments__argument:hover {
+      box-shadow: 0 15px 36px rgba(0, 0, 0, 0.1); }
+    .corona-arguments__argument:not(:last-child) {
+      margin-bottom: 24px; }
+  .corona-arguments__content {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px; }
+  .corona-arguments__title {
+    text-align: center;
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 12px;
+    color: #33424e;
+    font-weight: bold; }
+  .corona-arguments__image {
+    margin: 0 auto 14px auto; }
+  .corona-arguments__list {
+    max-width: 240px;
+    width: 100%;
+    margin: 0 auto; }
+  .corona-arguments__item {
+    color: #33424e;
+    font-weight: bold; }
+    .corona-arguments__item:not(:last-child) {
+      margin-bottom: 12px; }
+    .corona-arguments__item:nth-child(3) {
+      margin-bottom: 34px; }
+  .corona-arguments__button {
+    max-width: 180px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #0297b1;
+    color: #ffffff;
+    padding: 2px 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 16px; }
+    .corona-arguments__button:hover {
+      background-color: #016b7e; }
+  @media screen and (min-width: 768px) {
+    .corona-arguments {
+      padding: 60px 32px; }
+      .corona-arguments__container {
+        flex-wrap: wrap;
+        max-width: 1366px;
+        width: 100%;
+        margin: 0 auto; }
+      .corona-arguments__argument-container {
+        max-width: 768px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between; }
+      .corona-arguments__argument {
+        max-width: initial;
+        flex-direction: row;
+        padding: 40px 16px; }
+      .corona-arguments__content {
+        margin-right: 24px; }
+      .corona-arguments__title {
+        font-size: 24px;
+        line-height: 32px; }
+      .corona-arguments__list {
+        padding-top: 40px;
+        max-width: 400px; }
+      .corona-arguments__item {
+        font-size: 18px;
+        line-height: 26px; }
+      .corona-arguments__button {
+        font-size: 18px;
+        max-width: 225px;
+        margin: 0 0 40px 0; } }
+  @media screen and (min-width: 1024px) {
+    .corona-arguments {
+      padding: 80px 36px; }
+      .corona-arguments__argument-container {
+        max-width: 1024px; }
+      .corona-arguments__content {
+        margin-right: 24px; }
+      .corona-arguments__title {
+        font-size: 26px;
+        line-height: 34px; }
+      .corona-arguments__list {
+        max-width: 600px; }
+      .corona-arguments__item {
+        font-size: 20px;
+        line-height: 28px; }
+      .corona-arguments__button {
+        font-size: 20px;
+        max-width: 250px; } }
+
+/*# sourceMappingURL=style.css.map */
