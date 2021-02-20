@@ -171,6 +171,7 @@
       </div>
     </section> -->
     <section class="corona-arguments">
+      <h2 class="corona-arguments__main-title">3 Argumente für uns</h2>
       <div class="corona-arguments__container">
         <div class="corona-arguments__argument">
           <div class="corona-arguments__argument-container">
@@ -193,9 +194,6 @@
               <p class="corona-arguments__item">
                 Alle Tests werden ärztlich überwacht, ausgewertet und attestiert
               </p>
-              <a href="">
-                <button class="corona-arguments__button">Das Team</button>
-              </a>
             </div>
           </div>
         </div>
@@ -216,11 +214,6 @@
               </p>
               <p class="corona-arguments__item">
                 EU – und vom RKI empfohlene Tests
-              </p>
-              <p class="corona-arguments__item">
-                Für Antigen-Schnelltests tief im Nasen- oder Rachenraum eine
-                Probe entnommen. Sind darin Eiweiß-Fragmente des Virus
-                enthalten, wird ein positives Testergebnis angezeigt
               </p>
               <a href="">
                 <button class="corona-arguments__button">
@@ -258,5 +251,49 @@
         </div>
       </div>
     </section>
+    <section class="corona-form">
+      <h2 class="corona-form__title">Отправьте запрос</h2>
+      <div class="corona-form__container">
+        <form action="" class="corona-form__form">
+          <div class="corona-form__line">
+            <input type="text" placeholder="Имя" required />
+            <input type="text" placeholder="Фирма" required />
+          </div>
+          <div class="corona-form__line">
+            <input type="email" placeholder="e-mail" required />
+            <input type="tel" placeholder="телефон" required />
+          </div>
+          <textarea class="corona-form__text" rows="5" required> </textarea>
+          <div class="corona-form__checkbox-container">
+            <input
+              id="coronaCheckbox"
+              class="corona-form__checkbox"
+              type="checkbox"
+              onclick="isCheckboxPresser()"
+            /><span>Даю согласие на обработку моих персональных данных</span>
+          </div>
+          <button
+            disabled
+            class="corona-form__button"
+            type="submit"
+            id="coronaSendFormButton"
+          >
+            Отправить
+          </button>
+        </form>
+      </div>
+    </section>
   </body>
+
+  <script>
+    function isCheckboxPresser() {
+      let checkBox = document.getElementById("coronaCheckbox");
+      let sendButton = document.getElementById("coronaSendFormButton");
+      if (checkBox.checked == true) {
+        sendButton.disabled = false;
+      } else {
+        sendButton.disabled = true;
+      }
+    }
+  </script>
 </html>

@@ -139,10 +139,6 @@ button {
     font-weight: bold; }
     .corona-banner__prices-scroll:hover {
       background-color: #016b7e; }
-    .corona-banner__prices-scroll svg {
-      transform: rotate(90deg);
-      width: 25px;
-      height: 25px; }
   @media screen and (min-width: 1024px) {
     .corona-banner {
       padding: 500px 5% 100px 5%; }
@@ -166,7 +162,8 @@ button {
     text-align: center;
     font-size: 28px;
     line-height: 36px;
-    color: #000000;
+    color: #33424e;
+    font-weight: bold;
     margin-bottom: 24px; }
   .corona-prices__list {
     display: flex;
@@ -292,6 +289,13 @@ button {
 .corona-arguments {
   background-color: #ffffff;
   padding: 40px 16px; }
+  .corona-arguments__main-title {
+    text-align: center;
+    font-size: 28px;
+    line-height: 36px;
+    color: #33424e;
+    font-weight: bold;
+    margin-bottom: 24px; }
   .corona-arguments__container {
     display: flex;
     flex-direction: column; }
@@ -349,6 +353,9 @@ button {
   @media screen and (min-width: 768px) {
     .corona-arguments {
       padding: 60px 32px; }
+      .corona-arguments__main-title {
+        font-size: 32px;
+        line-height: 40px; }
       .corona-arguments__container {
         flex-wrap: wrap;
         max-width: 1366px;
@@ -382,6 +389,9 @@ button {
   @media screen and (min-width: 1024px) {
     .corona-arguments {
       padding: 80px 36px; }
+      .corona-arguments__title {
+        font-size: 36px;
+        line-height: 42px; }
       .corona-arguments__argument-container {
         max-width: 1024px; }
       .corona-arguments__content {
@@ -397,5 +407,68 @@ button {
       .corona-arguments__button {
         font-size: 20px;
         max-width: 250px; } }
+.corona-form {
+  background-color: #5f8b9d;
+  padding: 40px 24px; }
+  .corona-form__title {
+    text-align: center;
+    font-size: 28px;
+    line-height: 36px;
+    color: #33424e;
+    font-weight: bold;
+    margin-bottom: 24px; }
+  .corona-form__container {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto; }
+  .corona-form__line {
+    display: flex;
+    flex-direction: column; }
+    .corona-form__line input {
+      margin-bottom: 12px; }
+  .corona-form__text {
+    max-width: 100%;
+    width: 100%;
+    color: #000000;
+    margin-bottom: 24px; }
+  .corona-form__checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px; }
+  .corona-form__checkbox {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 12px; }
+  .corona-form__button {
+    width: 100%;
+    margin: 0 0 40px 0;
+    background-color: #0297b1;
+    color: #fff;
+    padding: 2px 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 16px; }
+    .corona-form__button:disabled {
+      background-color: #016c7f;
+      color: #e6e6e6; }
+    .corona-form__button:hover {
+      background-color: #016b7e; }
+  @media screen and (min-width: 500px) {
+    .corona-form__container {
+      max-width: 800px;
+      min-width: 450px;
+      width: 60%;
+      margin: 0 auto; }
+    .corona-form__line {
+      flex-direction: row;
+      justify-content: space-between; }
+      .corona-form__line input:first-child {
+        margin-right: 24px; }
+      .corona-form__line:not(:last-child) {
+        margin-bottom: 24px; } }
+  @media screen and (min-width: 768px) {
+    .corona-form {
+      padding: 60px 24px; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -199,12 +199,6 @@ $text-color: #33424e;
       &:hover {
         background-color: $button-hover-color;
       }
-
-      svg {
-        transform: rotate(90deg);
-        width: 25px;
-        height: 25px;
-      }
     }
 
     @media screen and (min-width: 1024px) {
@@ -242,7 +236,8 @@ $text-color: #33424e;
       text-align: center;
       font-size: 28px;
       line-height: 36px;
-      color: #000000;
+      color: $text-color;
+      font-weight: bold;
       margin-bottom: 24px;
     }
 
@@ -441,6 +436,15 @@ $text-color: #33424e;
     background-color: $white-background;
     padding: 40px 16px;
 
+    &__main-title {
+      text-align: center;
+      font-size: 28px;
+      line-height: 36px;
+      color: $text-color;
+      font-weight: bold;
+      margin-bottom: 24px;
+    }
+
     &__container {
       display: flex;
       flex-direction: column;
@@ -525,6 +529,11 @@ $text-color: #33424e;
     @media screen and (min-width: 768px) {
       padding: 60px 32px;
 
+      &__main-title {
+        font-size: 32px;
+        line-height: 40px;
+      }
+
       &__container {
         flex-wrap: wrap;
         max-width: 1366px;
@@ -575,6 +584,11 @@ $text-color: #33424e;
     @media screen and (min-width: 1024px) {
       padding: 80px 36px;
 
+      &__title {
+        font-size: 36px;
+        line-height: 42px;
+      }
+
       &__argument-container {
         max-width: 1024px;
       }
@@ -601,6 +615,103 @@ $text-color: #33424e;
         font-size: 20px;
         max-width: 250px;
       }
+    }
+  }
+
+  &-form {
+    background-color: $accent-color;
+    padding: 40px 24px;
+
+    &__title {
+      text-align: center;
+      font-size: 28px;
+      line-height: 36px;
+      color: $text-color;
+      font-weight: bold;
+      margin-bottom: 24px;
+    }
+
+    &__container {
+      max-width: 400px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    &__line {
+      display: flex;
+      flex-direction: column;
+
+      input {
+        margin-bottom: 12px;
+      }
+    }
+
+    &__text {
+      max-width: 100%;
+      width: 100%;
+      color: #000000;
+      margin-bottom: 24px;
+    }
+
+    &__checkbox-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    &__checkbox {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      margin-right: 12px;
+    }
+
+    &__button {
+      width: 100%;
+      margin: 0 0 40px 0;
+      background-color: $button-color;
+      color: #fff;
+      padding: 2px 0;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 16px;
+
+      &:disabled {
+        background-color: darken($button-color, 10%);
+        color: darken(#fff, 10%);
+      }
+
+      &:hover {
+        background-color: $button-hover-color;
+      }
+    }
+
+    @media screen and (min-width: 500px) {
+      &__container {
+        max-width: 800px;
+        min-width: 450px;
+        width: 60%;
+        margin: 0 auto;
+      }
+
+      &__line {
+        flex-direction: row;
+        justify-content: space-between;
+
+        input {
+          &:first-child {
+            margin-right: 24px;
+          }
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 24px;
+        }
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      padding: 60px 24px;
     }
   }
 }
