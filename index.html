@@ -18,7 +18,7 @@
         <a class="corona-header__nav--link" href="#" target="_blank">
           <img
             class="corona-header__logo"
-            src="https://via.placeholder.com/150x110"
+            src="https://via.placeholder.com/80x80"
             alt="Corona Header Logo"
           />
         </a>
@@ -37,18 +37,24 @@
               >Kontakte</a
             >
           </div>
-          <button class="corona-header__register">Anmelden</button>
+          <a class="corona-header__register">TERMIN BUCHEN</a>
         </div>
       </nav>
     </header>
     <section class="corona-banner">
-      <div class="corona-banner__content">
-        <h1 class="corona-banner__title">Corona Test in Lübeck</h1>
-        <p class="corona-banner__subtitle">Wir testen Sie. Ohne Wartezeit</p>
-        <p class="corona-banner__subtitle second">
-          Mit PCR,-Gurgel-,Antigen- und Antikörpertests auf das COVID19
-        </p>
-        <button class="corona-banner__prices-scroll">MEHR</button>
+      <div class="corona-banner__container">
+        <img
+          class="corona-banner__image"
+          src="https://via.placeholder.com/850"
+          alt=""
+        />
+        <div class="corona-banner__content">
+          <p class="corona-banner__title">
+            Corona Test <br />
+            Zentrum Lübeck
+          </p>
+          <a class="corona-banner__prices-scroll">MEHR</a>
+        </div>
       </div>
     </section>
     <section class="corona-prices">
@@ -56,10 +62,6 @@
       <ul class="corona-prices__list">
         <li class="corona-prices__item">
           <p class="corona-prices__item-title">15 Min-Antigen-Schnelltest</p>
-          <p class="corona-prices__item-price">
-            <span class="corona-prices__item-price--amount">39,90 €</span>
-            <span class="corona-prices__item-price--other">inkl. Attest</span>
-          </p>
           <ul class="corona-prices__item-advantages">
             <li class="corona-prices__advantages-item">Nasenabstrich</li>
             <li class="corona-prices__advantages-item">
@@ -75,18 +77,14 @@
               Zweisprachiges, ärztlich beglaubigtes Attest
             </li>
           </ul>
-          <a class="corona-prices__button-link" href="#">
-            <button class="corona-prices__button">termin buchen</button>
-          </a>
+          <p class="corona-prices__item-price">
+            <span class="corona-prices__item-price--amount">39, 90 €</span>
+            <span class="corona-prices__item-price--other">inkl. Attest</span>
+          </p>
+          <a class="corona-prices__button">termin buchen</a>
         </li>
         <li class="corona-prices__item">
           <p class="corona-prices__item-title">PCR-Test</p>
-          <p class="corona-prices__item-price">
-            <span class="corona-prices__item-price--amount">119,90 €</span>
-            <span class="corona-prices__item-price--other"
-              >inkl. Labor-Attest</span
-            >
-          </p>
           <ul class="corona-prices__item-advantages">
             <li class="corona-prices__advantages-item">
               Rachen und Nasenabstrich
@@ -107,16 +105,16 @@
               Gültig für internationale Reisen
             </li>
           </ul>
-          <a class="corona-prices__button-link" href="#">
-            <button class="corona-prices__button">termin buchen</button>
-          </a>
+          <p class="corona-prices__item-price">
+            <span class="corona-prices__item-price--amount">119,90 €</span>
+            <span class="corona-prices__item-price--other"
+              >inkl. Labor-Attest</span
+            >
+          </p>
+          <a class="corona-prices__button">termin buchen</a>
         </li>
         <li class="corona-prices__item">
           <p class="corona-prices__item-title">Antikörper-Test</p>
-          <p class="corona-prices__item-price">
-            <span class="corona-prices__item-price--amount">69,90 €</span>
-            <span class="corona-prices__item-price--other">inkl. Attest</span>
-          </p>
           <ul class="corona-prices__item-advantages">
             <li class="corona-prices__advantages-item">Nasenabstrich</li>
             <li class="corona-prices__advantages-item">
@@ -132,16 +130,14 @@
               Zweisprachiges, ärztlich beglaubigtes Attest
             </li>
           </ul>
-          <a class="corona-prices__button-link" href="#">
-            <button class="corona-prices__button">termin buchen</button>
-          </a>
+          <p class="corona-prices__item-price">
+            <span class="corona-prices__item-price--amount">69,90 €</span>
+            <span class="corona-prices__item-price--other">inkl. Attest</span>
+          </p>
+          <a class="corona-prices__button">termin buchen</a>
         </li>
         <li class="corona-prices__item">
           <p class="corona-prices__item-title">Gurgeltest</p>
-          <p class="corona-prices__item-price">
-            <span class="corona-prices__item-price--amount">29,90 €</span>
-            <span class="corona-prices__item-price--other">inkl. Attest</span>
-          </p>
           <ul class="corona-prices__item-advantages">
             <li class="corona-prices__advantages-item">
               In 5 Minuten testen lassen
@@ -156,38 +152,57 @@
               Zweisprachiges, ärztlich beglaubigtes Attest
             </li>
           </ul>
-          <a class="corona-prices__button-link" href="#">
-            <button class="corona-prices__button">termin buchen</button>
-          </a>
+          <p class="corona-prices__item-price">
+            <span class="corona-prices__item-price--amount">29,90 €</span>
+            <span class="corona-prices__item-price--other">inkl. Attest</span>
+          </p>
+          <a class="corona-prices__button">termin buchen</a>
         </li>
       </ul>
     </section>
-    <!-- <section class="corona__location">
-      <h2>Где нас найти</h2>
-      <div class="corona-location__location-card">
-        <p class="corona-location__city">Lübeck</p>
-        <p class="corona-location__address"></p>
-
+    <section class="corona-find">
+      <div class="corona-find__container">
+        <div class="corona-find__content">
+          <p class="corona-find__title">Corona Test Zentrum Lübeck</p>
+          <div class="corona-find__address">
+            <p class="corona-find__address-title">Die Adresse</p>
+            <p class="corona-find__address-text">
+              Königstraße 57<br />
+              23552 Lübeck<br />
+              Im Lichthof, ehemals Königspassage
+            </p>
+          </div>
+          <p class="corona-find__working-time">
+            Öffnungszeiten<br />
+            Montag-Samstag<br />
+            6:45 bis 20:45 Uhr
+          </p>
+          <a class="corona-find__button">Termin jetzt buchen </a>
+        </div>
+        <div class="corona-find__map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2352.6257670581704!2d10.685755116530801!3d53.86730228009151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b20959b1c3bb15%3A0xe2990e5e02a09f78!2zS8O2bmlnc3RyYcOfZSA1NywgMjM1NTIgTMO8YmVjaywg0JPQtdGA0LzQsNC90LjRjw!5e0!3m2!1sru!2sua!4v1614117522193!5m2!1sru!2sua"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
       </div>
-    </section> -->
+    </section>
     <section class="corona-arguments">
-      <h2 class="corona-arguments__main-title">3 Argumente für uns</h2>
+      <h2 class="corona-arguments__main-title">Drei Argumente für uns</h2>
       <div class="corona-arguments__container">
         <div class="corona-arguments__argument">
           <div class="corona-arguments__argument-container">
             <div class="corona-arguments__content">
-              <p class="corona-arguments__title">Qualität</p>
               <img
                 class="corona-arguments__image"
-                src="https://via.placeholder.com/250x250"
-                alt=""
+                src="https://i.citrus.ua/uploads/promo/dnepr/corona/argument-1.png"
+                alt="Lübeck Corona Test Argument 1"
               />
             </div>
             <div class="corona-arguments__list">
-              <p class="corona-arguments__item">
-                Labormedizinische Leistungen im Interesse unserer Patient*innen,
-                sowie höchste analytische Qualität und fachärztliche Kompetenz
-              </p>
+              <p class="corona-arguments__title">Qualität</p>
               <p class="corona-arguments__item">
                 Durchgeführt von medizinisch geschultem Fachpersonal
               </p>
@@ -200,87 +215,151 @@
         <div class="corona-arguments__argument">
           <div class="corona-arguments__argument-container">
             <div class="corona-arguments__content">
-              <p class="corona-arguments__title">Der Schnelltest</p>
               <img
                 class="corona-arguments__image"
-                src="https://via.placeholder.com/250x250"
-                alt=""
+                src="https://i.citrus.ua/uploads/promo/dnepr/corona/argument-1.png"
+                alt="Lübeck Corona Test Argument 2"
               />
             </div>
             <div class="corona-arguments__list">
+              <p class="corona-arguments__title">Antigen Schnelltest</p>
               <p class="corona-arguments__item">
-                COVID-19 Antigen-Schnelltest zum qualitativen Nachweis von
-                SARS-CoV-2
+                COVID-19 Antigen-Schnelltest zum qualitativen <br />
+                Nachweis von SARS-CoV-2
               </p>
               <p class="corona-arguments__item">
                 EU – und vom RKI empfohlene Tests
               </p>
-              <a href="">
-                <button class="corona-arguments__button">
-                  Der Schnelltest
-                </button>
-              </a>
+              <a class="corona-arguments__button" href=""
+                >Antigen Schnelltest</a
+              >
             </div>
           </div>
         </div>
         <div class="corona-arguments__argument">
-          <div class="corona-arguments__argument-container">
+          <div class="corona-arguments__argument-container last">
             <div class="corona-arguments__content">
-              <p class="corona-arguments__title">PCR-Tests</p>
               <img
                 class="corona-arguments__image"
-                src="https://via.placeholder.com/250x250"
-                alt=""
+                src="https://i.citrus.ua/uploads/promo/dnepr/corona/argument-1.png"
+                alt="Lübeck Corona Test Argument 3"
               />
             </div>
             <div class="corona-arguments__list">
+              <p class="corona-arguments__title">PCR-Test</p>
               <p class="corona-arguments__item">
                 Zweisprachiges Attest mit internationaler Reisegültigkeit
               </p>
               <p class="corona-arguments__item">
-                Entnahme durch Nasen-Rachen Abstrich
-              </p>
-              <p class="corona-arguments__item">
                 Auswertungen PCR Tests im Labor zum direkten Erregernachwei
               </p>
-              <a href="">
-                <button class="corona-arguments__button">Der PCR-Test</button>
-              </a>
+              <a href="" class="corona-arguments__button">PCR-Test</a>
             </div>
           </div>
         </div>
       </div>
     </section>
     <section class="corona-form">
-      <h2 class="corona-form__title">Отправьте запрос</h2>
+      <h2 class="corona-form__title">
+        Unternehmen oder Event?<br />
+        Wir kommen zu Ihnen.
+      </h2>
+      <hr />
+      <p class="corona-form__subtitle">
+        Wir bieten individuelle Lösungen für mobile Testzentren für Unternehmen
+        und Veranstaltungen. Von kleinen privaten Partys bis zu kommerziellen
+        Veranstaltungen und Festivals.
+      </p>
       <div class="corona-form__container">
         <form action="" class="corona-form__form">
           <div class="corona-form__line">
-            <input type="text" placeholder="Имя" required />
-            <input type="text" placeholder="Фирма" required />
+            <input type="text" placeholder="Name*" required />
+            <input type="text" placeholder="Firma*" required />
           </div>
           <div class="corona-form__line">
-            <input type="email" placeholder="e-mail" required />
-            <input type="tel" placeholder="телефон" required />
-          </div>
-          <textarea class="corona-form__text" rows="5" required> </textarea>
-          <div class="corona-form__checkbox-container">
+            <input type="email" placeholder="Email*" required />
             <input
-              id="coronaCheckbox"
-              class="corona-form__checkbox"
-              type="checkbox"
-              onclick="isCheckboxPresser()"
-            /><span>Даю согласие на обработку моих персональных данных</span>
+              autocomplete="off"
+              maxlength="12"
+              name="phone"
+              pattern="\+49\s[\(][0-9]{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+              placeholder="Telefon*"
+              required="required"
+              type="tel"
+            />
           </div>
+          <div class="corona-form__text-container">
+            <textarea class="corona-form__text" rows="5" required> </textarea>
+          </div>
+          <span class="corona-form__checkbox-container">
+            <input
+              class="styled-checkbox"
+              id="styled-checkbox-4"
+              type="checkbox"
+              value="value4"
+            />
+            <label for="styled-checkbox-4"
+              >Ich stimme zu, dass meine Angaben aus dem Kontaktformular zur
+              Beantwortung meiner Anfrage erhoben und verarbeitet werden. Die
+              Daten werden bei uns gespeichert bis Sie eine Anfrage auf Löschung
+              Ihrer Daten stellen. Hinweis: Sie können Ihre Einwilligung
+              jederzeit für die Zukunft per E-Mail an berlin@covidzentrum.de
+              widerrufen. Detaillierte Informationen zum Umgang mit Nutzerdaten
+              finden Sie in unserer Datenschutzerklärung</label
+            >
+          </span>
           <button
             disabled
             class="corona-form__button"
             type="submit"
             id="coronaSendFormButton"
           >
-            Отправить
+            TERMIN BUCHEN
           </button>
         </form>
+      </div>
+    </section>
+    <section class="corona-footer">
+      <div class="corona-footer__container">
+        <div class="corona-footer__left-side">
+          <img
+            class="corona-footer__logo"
+            src="https://via.placeholder.com/135x135"
+            alt="Lübeck Corona Test Footer Logo"
+          />
+          <ul class="corona-footer__left-list">
+            <li class="corona-footer__left-item">
+              <a href="#"> Ссылка 1 </a>
+            </li>
+            <li class="corona-footer__left-item">
+              <a href="#"> Ссылка 2 </a>
+            </li>
+            <li class="corona-footer__left-item">
+              <a href="#"> Ссылка 2 </a>
+            </li>
+          </ul>
+        </div>
+        <div class="corona-footer__right-side">
+          <ul class="corona-footer__right-list">
+            <li class="corona-footer__right-item">
+              <p class="corona-footer__item-title phone">Telefon</p>
+              <p class="corona-footer__item-text">+49 176 60865561</p>
+            </li>
+            <li class="corona-footer__right-item">
+              <p class="corona-footer__item-title mail">Email</p>
+              <p class="corona-footer__item-text">lübeck@covidzentrum.de</p>
+            </li>
+            <li class="corona-footer__right-item">
+              <p class="corona-footer__item-title address">Die Adresse</p>
+              <p class="corona-footer__item-text">
+                Corona Testzentrum Lübeck<br />
+                Königstraße 57<br />
+                23552 Lübeck<br />
+                Im Lichthof, ehemals Königspassage
+              </p>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
   </body>
