@@ -135,6 +135,14 @@ $footer-background: #374451;
       }
     }
 
+    .tests {
+      color: $accent-color;
+
+      &:hover {
+        color: lighten($accent-color, 10%);
+      }
+    }
+
     &__register {
       width: 280px;
       background-color: $button-color;
@@ -169,7 +177,7 @@ $footer-background: #374451;
       &__nav-list {
         flex-direction: row;
         justify-content: space-between;
-        max-width: 400px;
+        max-width: 610px;
         width: 100%;
       }
 
@@ -194,7 +202,7 @@ $footer-background: #374451;
       }
 
       &__nav-list {
-        max-width: 490px;
+        max-width: 710px;
       }
 
       &__nav-item {
@@ -213,7 +221,7 @@ $footer-background: #374451;
       }
 
       &__nav-list {
-        max-width: 665px;
+        max-width: 910px;
       }
 
       &__nav-item {
@@ -230,7 +238,6 @@ $footer-background: #374451;
     &__container {
       display: flex;
       flex-direction: column;
-      max-height: 500px;
     }
 
     &__content {
@@ -314,6 +321,7 @@ $footer-background: #374451;
     &__list {
       display: flex;
       flex-direction: column;
+      padding-bottom: 40px;
     }
 
     &__item {
@@ -953,66 +961,137 @@ $footer-background: #374451;
       transition: 0.3s;
     }
 
-    .styled-checkbox {
-      position: absolute; // take it out of document flow
-      opacity: 0; // hide it
-
-      & + label {
-        position: relative;
-        cursor: pointer;
-        padding: 0;
-        font-size: 12px;
-      }
-
-      // Box.
-      & + label:before {
-        content: "";
-        margin-right: 10px;
-        display: inline-block;
-        vertical-align: text-top;
-        width: 20px;
-        height: 20px;
-        left: 0;
-        background: white;
-        transition: 0.3s;
-      }
-
-      // Box hover
-      &:hover + label:before {
-        background-color: darken($form-button-color, 10%);
-      }
-
-      // Box checked
-      &:checked + label:before {
-        background-color: $form-button-color;
-      }
-
-      // Disabled state label.
-      &:disabled + label {
-        color: #b8b8b8;
-        cursor: auto;
-      }
-
-      // Disabled box.
-      &:disabled + label:before {
-        box-shadow: none;
-        background: #ddd;
-      }
-
-      // Checkmark. Could be replaced with an image
-      &:checked + label:after {
-        content: "";
-        position: absolute;
-        left: 5px;
-        top: 9px;
-        background: white;
-        width: 2px;
-        height: 2px;
-        box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white,
-          4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
-        transform: rotate(45deg);
-      }
+    /* The container */
+    .container {
+      display: block;
+      position: relative;
+      padding-left: 40px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      font-size: 14px;
+      color: $text-color;
+      max-width: 460px;
+      width: 100%;
+      margin: 0 auto 30px auto;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
     }
+
+    /* Hide the browser's default checkbox */
+    .container input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+
+    /* Create a custom checkbox */
+    .checkmark {
+      position: absolute;
+      top: 35%;
+      left: 0;
+      height: 25px;
+      width: 25px;
+      background-color: transparent;
+      border: 1px solid $text-color;
+      border-radius: 4px;
+    }
+
+    /* When the checkbox is checked, add a blue background */
+    .container input:checked ~ .checkmark {
+      background-color: transparent;
+    }
+
+    /* Create the checkmark/indicator (hidden when not checked) */
+    .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+
+    /* Show the checkmark when checked */
+    .container input:checked ~ .checkmark:after {
+      display: block;
+    }
+
+    /* Style the checkmark/indicator */
+    .container .checkmark:after {
+      left: 7px;
+      top: 3px;
+      width: 6px;
+      height: 10px;
+      border: solid #374451;
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+
+    // .styled-checkbox {
+    //   position: absolute; // take it out of document flow
+    //   opacity: 0; // hide it
+
+    //   & + label {
+    //     position: relative;
+    //     cursor: pointer;
+    //     padding: 0;
+    //     font-size: 12px;
+    //     padding-left: 36px;
+    //   }
+
+    //   // Box.
+    //   & + label:before {
+    //     content: "";
+    //     margin-right: 10px;
+    //     display: flex;
+    //     position: absolute;
+    //     width: 20px;
+    //     height: 20px;
+    //     left: 0;
+    //     top: 35%;
+    //     background: white;
+    //     transition: 0.3s;
+    //   }
+
+    //   // Box hover
+    //   &:hover + label:before {
+    //     background-color: darken($form-button-color, 10%);
+    //   }
+
+    //   // Box checked
+    //   &:checked + label:before {
+    //     background-color: $form-button-color;
+    //   }
+
+    //   // Disabled state label.
+    //   &:disabled + label {
+    //     color: #b8b8b8;
+    //     cursor: auto;
+    //   }
+
+    //   // Disabled box.
+    //   &:disabled + label:before {
+    //     box-shadow: none;
+    //     background: #ddd;
+    //   }
+
+    //   // Checkmark. Could be replaced with an image
+    //   &:checked + label:after {
+    //     content: "";
+    //     position: absolute;
+    //     left: 5px;
+    //     top: 9px;
+    //     background: white;
+    //     width: 2px;
+    //     height: 2px;
+    //     box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white,
+    //       4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+    //     transform: rotate(45deg);
+    //   }
+    // }
 
     &__button {
       width: 100%;
@@ -1025,8 +1104,12 @@ $footer-background: #374451;
       border-radius: 40px;
 
       &:disabled {
-        background-color: darken($form-button-color, 10%);
-        color: darken(#fff, 10%);
+        cursor: initial;
+        opacity: 0.3;
+      }
+
+      &:disabled:hover {
+        background-color: $form-button-color;
       }
 
       &:hover {
@@ -1106,30 +1189,31 @@ $footer-background: #374451;
 
     &__left-side {
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
       width: 100%;
-      align-items: center;
       margin: 0 auto 36px auto;
       max-width: 350px;
       width: 100%;
     }
 
     &__logo {
-      margin-right: 24px;
+      max-width: 135px;
+      margin-bottom: 24px;
     }
 
     &__left-list {
       display: flex;
       flex-direction: column;
-      margin-right: 12px;
     }
 
     &__left-item {
       a {
-        line-height: 22px;
+        font-size: 16px;
+        line-height: 20px;
         margin-bottom: 0;
         color: #eef2f3;
         transition: 0.3s;
+        text-align: left;
 
         &:hover {
           color: #5f8b9d;
@@ -1159,8 +1243,8 @@ $footer-background: #374451;
 
     &__item-title {
       font-weight: bold;
-      font-size: 16px;
-      line-height: 20px;
+      font-size: 18px;
+      line-height: 22px;
       padding-left: 30px;
       margin-bottom: 12px;
       position: relative;
@@ -1190,8 +1274,8 @@ $footer-background: #374451;
     }
 
     &__item-text {
-      font-size: 14px;
-      line-height: 18px;
+      font-size: 16px;
+      line-height: 20px;
     }
 
     @media screen and (min-width: 768px) {
@@ -1203,11 +1287,18 @@ $footer-background: #374451;
       }
 
       &__left-side {
-        width: 35%;
+        width: 48%;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      &__logo {
+        margin-right: 24px;
+        margin-bottom: 0;
       }
 
       &__right-side {
-        width: 65%;
+        width: 52%;
       }
 
       &__right-list {
@@ -1226,7 +1317,731 @@ $footer-background: #374451;
       }
 
       &__left-side {
-        width: 30%;
+        width: 35%;
+        margin: 0;
+      }
+
+      &__right-side {
+        width: 60%;
+        margin: 0 0 0 auto;
+        max-width: initial;
+        justify-content: center;
+      }
+
+      &__right-list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: initial;
+      }
+    }
+  }
+}
+
+.impressum {
+  background-color: $white-background;
+  &-header {
+    background-color: $menu-background;
+
+    &__nav {
+      display: flex;
+      flex-direction: column;
+      padding: 40px 16px;
+
+      &--link {
+        max-width: 150px;
+        width: 100%;
+        margin: 0 auto 24px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          border-radius: 50%;
+        }
+      }
+    }
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    &__nav-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__nav-item {
+      font-size: 16px;
+      line-height: 20px;
+      margin-bottom: 14px;
+      max-width: 120px;
+      color: $menu-text-color;
+      transition: 0.3s;
+      width: initial;
+
+      &:hover {
+        color: $button-color;
+      }
+    }
+
+    &__register {
+      width: 280px;
+      background-color: $button-color;
+      color: $menu-text-color;
+      margin: 0 auto;
+      border-radius: 40px;
+
+      &:hover {
+        background-color: darken($button-color, 10%);
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      &__nav {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 40px 24px;
+
+        &--link {
+          margin: 0;
+        }
+      }
+
+      &__container {
+        flex-direction: row;
+        align-items: center;
+        max-width: 610px;
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      &__nav-list {
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 610px;
+        width: 100%;
+      }
+
+      &__nav-item {
+        margin-bottom: 0;
+        max-width: initial;
+        font-size: 14px;
+        line-height: 18px;
+        padding: 0 5px;
+      }
+
+      &__register {
+        font-size: 14px;
+        max-width: 140px;
+        margin: 0;
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      &__container {
+        max-width: 710px;
+      }
+
+      &__nav-list {
+        max-width: 710px;
+      }
+
+      &__nav-item {
+        font-size: 18px;
+      }
+
+      &__register {
+        font-size: 16px;
+        max-width: 180px;
+      }
+    }
+
+    @media screen and (min-width: 1366px) {
+      &__container {
+        max-width: 910px;
+      }
+
+      &__nav-list {
+        max-width: 910px;
+      }
+
+      &__nav-item {
+        max-width: 180px;
+        font-size: 22px;
+        line-height: 26px;
+      }
+    }
+  }
+
+  &-content {
+    padding: 40px 16px;
+    width: 100%;
+    margin: 0 auto;
+
+    &__big-title {
+      font-size: 24px;
+      line-height: 28px;
+      color: $text-color;
+      font-weight: bold;
+      margin-bottom: 24px;
+    }
+
+    &__container {
+      margin-bottom: 36px;
+    }
+
+    &__title {
+      font-size: 18px;
+      line-height: 24px;
+      color: $text-color;
+      font-weight: bold;
+    }
+
+    &__text {
+      font-size: 14px;
+      line-height: 18px;
+      color: $text-color;
+    }
+
+    @media screen and (min-width: 768px) {
+      padding: 60px 0;
+      max-width: 976px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      max-width: 1100px;
+      padding: 80px 0;
+    }
+  }
+
+  &-footer {
+    background-color: $footer-background;
+    padding: 40px 16px;
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__left-side {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin: 0 auto 36px auto;
+      max-width: 350px;
+      width: 100%;
+    }
+
+    &__logo {
+      max-width: 135px;
+      margin-bottom: 24px;
+    }
+
+    &__left-list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__left-item {
+      a {
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 0;
+        color: #eef2f3;
+        transition: 0.3s;
+        text-align: left;
+
+        &:hover {
+          color: #5f8b9d;
+        }
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+
+    &__right-side {
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      max-width: 350px;
+      width: 100%;
+    }
+
+    &__right-item {
+      color: $light-color;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+
+    &__item-title {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 22px;
+      padding-left: 30px;
+      margin-bottom: 12px;
+      position: relative;
+
+      &:before {
+        position: absolute;
+        content: "";
+        width: 20px;
+        height: 20px;
+        left: 0;
+      }
+
+      &.phone:before {
+        background: url("https://i.citrus.ua/uploads/promo/dnepr/corona/phone-icon.svg")
+          center/100% no-repeat;
+      }
+
+      &.mail:before {
+        background: url("https://i.citrus.ua/uploads/promo/dnepr/corona/mail-icon.svg")
+          center/100% no-repeat;
+      }
+
+      &.address:before {
+        background: url("https://i.citrus.ua/uploads/promo/dnepr/corona/address-icon.svg")
+          center/100% no-repeat;
+      }
+    }
+
+    &__item-text {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    @media screen and (min-width: 768px) {
+      padding: 40px 24px;
+
+      &__container {
+        flex-direction: row;
+        justify-content: space-around;
+      }
+
+      &__left-side {
+        width: 48%;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      &__logo {
+        margin-right: 24px;
+        margin-bottom: 0;
+      }
+
+      &__right-side {
+        width: 52%;
+      }
+
+      &__right-list {
+        max-width: 300px;
+        width: 100%;
+        margin: 0 0 0 auto;
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      &__container {
+        align-items: center;
+        max-width: 1100px;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      &__left-side {
+        width: 35%;
+        margin: 0;
+      }
+
+      &__right-side {
+        width: 60%;
+        margin: 0 0 0 auto;
+        max-width: initial;
+        justify-content: center;
+      }
+
+      &__right-list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: initial;
+      }
+    }
+  }
+}
+
+.datenschutzbedingungen {
+  .link {
+    display: inline;
+    background: 0 0;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 10px;
+    font-family: Roboto, sans-serif;
+    border: none;
+    text-align: left;
+    line-height: 24px;
+    margin-bottom: 0;
+    font-size: 18px;
+
+    &:hover {
+      color: $accent-color;
+    }
+  }
+  background-color: $white-background;
+  &-header {
+    background-color: $menu-background;
+
+    &__nav {
+      display: flex;
+      flex-direction: column;
+      padding: 40px 16px;
+
+      &--link {
+        max-width: 150px;
+        width: 100%;
+        margin: 0 auto 24px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          border-radius: 50%;
+        }
+      }
+    }
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    &__nav-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__nav-item {
+      font-size: 16px;
+      line-height: 20px;
+      margin-bottom: 14px;
+      max-width: 120px;
+      color: $menu-text-color;
+      transition: 0.3s;
+      width: initial;
+
+      &:hover {
+        color: $button-color;
+      }
+    }
+
+    &__register {
+      width: 280px;
+      background-color: $button-color;
+      color: $menu-text-color;
+      margin: 0 auto;
+      border-radius: 40px;
+
+      &:hover {
+        background-color: darken($button-color, 10%);
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      &__nav {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 40px 24px;
+
+        &--link {
+          margin: 0;
+        }
+      }
+
+      &__container {
+        flex-direction: row;
+        align-items: center;
+        max-width: 610px;
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      &__nav-list {
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 610px;
+        width: 100%;
+      }
+
+      &__nav-item {
+        margin-bottom: 0;
+        max-width: initial;
+        font-size: 14px;
+        line-height: 18px;
+        padding: 0 5px;
+      }
+
+      &__register {
+        font-size: 14px;
+        max-width: 140px;
+        margin: 0;
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      &__container {
+        max-width: 710px;
+      }
+
+      &__nav-list {
+        max-width: 710px;
+      }
+
+      &__nav-item {
+        font-size: 18px;
+      }
+
+      &__register {
+        font-size: 16px;
+        max-width: 180px;
+      }
+    }
+
+    @media screen and (min-width: 1366px) {
+      &__container {
+        max-width: 910px;
+      }
+
+      &__nav-list {
+        max-width: 910px;
+      }
+
+      &__nav-item {
+        max-width: 180px;
+        font-size: 22px;
+        line-height: 26px;
+      }
+    }
+  }
+
+  &-content {
+    padding: 40px 16px;
+    width: 100%;
+    margin: 0 auto;
+
+    &__big-title {
+      font-size: 24px;
+      line-height: 28px;
+      color: $text-color;
+      font-weight: bold;
+      margin-bottom: 24px;
+    }
+
+    &__container {
+      margin-bottom: 36px;
+    }
+
+    &__main-title {
+      font-size: 30px;
+      line-height: 34px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    &__title {
+      font-size: 18px;
+      line-height: 24px;
+      color: $text-color;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    &__text {
+      font-size: 14px;
+      line-height: 18px;
+      color: $text-color;
+      margin-bottom: 12px;
+    }
+
+    @media screen and (min-width: 768px) {
+      padding: 60px 0;
+      max-width: 976px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      max-width: 1100px;
+      padding: 80px 0;
+
+      &__big-title {
+        font-size: 32px;
+        line-height: 36px;
+        margin-bottom: 40px;
+      }
+
+      &__title {
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 16px;
+      }
+
+      &__text {
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  &-footer {
+    background-color: $footer-background;
+    padding: 40px 16px;
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__left-side {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin: 0 auto 36px auto;
+      max-width: 350px;
+      width: 100%;
+    }
+
+    &__logo {
+      max-width: 135px;
+      margin-bottom: 24px;
+    }
+
+    &__left-list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__left-item {
+      a {
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 0;
+        color: #eef2f3;
+        transition: 0.3s;
+        text-align: left;
+
+        &:hover {
+          color: #5f8b9d;
+        }
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+
+    &__right-side {
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      max-width: 350px;
+      width: 100%;
+    }
+
+    &__right-item {
+      color: $light-color;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+
+    &__item-title {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 22px;
+      padding-left: 30px;
+      margin-bottom: 12px;
+      position: relative;
+
+      &:before {
+        position: absolute;
+        content: "";
+        width: 20px;
+        height: 20px;
+        left: 0;
+      }
+
+      &.phone:before {
+        background: url("https://i.citrus.ua/uploads/promo/dnepr/corona/phone-icon.svg")
+          center/100% no-repeat;
+      }
+
+      &.mail:before {
+        background: url("https://i.citrus.ua/uploads/promo/dnepr/corona/mail-icon.svg")
+          center/100% no-repeat;
+      }
+
+      &.address:before {
+        background: url("https://i.citrus.ua/uploads/promo/dnepr/corona/address-icon.svg")
+          center/100% no-repeat;
+      }
+    }
+
+    &__item-text {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    @media screen and (min-width: 768px) {
+      padding: 40px 24px;
+
+      &__container {
+        flex-direction: row;
+        justify-content: space-around;
+      }
+
+      &__left-side {
+        width: 48%;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      &__logo {
+        margin-right: 24px;
+        margin-bottom: 0;
+      }
+
+      &__right-side {
+        width: 52%;
+      }
+
+      &__right-list {
+        max-width: 300px;
+        width: 100%;
+        margin: 0 0 0 auto;
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      &__container {
+        align-items: center;
+        max-width: 1100px;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      &__left-side {
+        width: 35%;
         margin: 0;
       }
 

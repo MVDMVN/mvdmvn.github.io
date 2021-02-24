@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Corona</title>
+    <title>Corona Test Zentrum Lübeck | Hauptseite</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
@@ -24,20 +24,31 @@
         </a>
         <div class="corona-header__container">
           <div class="corona-header__nav-list">
-            <a class="corona-header__nav-item" href="#" target="_blank">
+            <a
+              class="corona-header__nav-item"
+              data-scroll-to="prices"
+              target="_blank"
+            >
               Testarten
             </a>
-            <a class="corona-header__nav-item" href="#" target="_blank"
+            <a class="corona-header__nav-item tests" href="#" target="_blank"
               >Ergebnis abrufen
             </a>
-            <a class="corona-header__nav-item" href="#" target="_blank">
+            <a
+              class="corona-header__nav-item"
+              data-scroll-to="form"
+              target="_blank"
+            >
               Für Unternehmen
             </a>
-            <a class="corona-header__nav-item" href="#" target="_blank"
+            <a
+              class="corona-header__nav-item"
+              data-scroll-to="contacts"
+              target="_blank"
               >Kontakte</a
             >
+            <a class="corona-header__register">TERMIN BUCHEN</a>
           </div>
-          <a class="corona-header__register">TERMIN BUCHEN</a>
         </div>
       </nav>
     </header>
@@ -53,11 +64,10 @@
             Corona Test <br />
             Zentrum Lübeck
           </p>
-          <a class="corona-banner__prices-scroll">MEHR</a>
         </div>
       </div>
     </section>
-    <section class="corona-prices">
+    <section class="corona-prices" id="prices">
       <h2 class="corona-prices__title">Testarten</h2>
       <ul class="corona-prices__list">
         <li class="corona-prices__item">
@@ -259,7 +269,7 @@
         </div>
       </div>
     </section>
-    <section class="corona-form">
+    <section class="corona-form" id="form">
       <h2 class="corona-form__title">
         Unternehmen oder Event?<br />
         Wir kommen zu Ihnen.
@@ -271,13 +281,13 @@
         Veranstaltungen und Festivals.
       </p>
       <div class="corona-form__container">
-        <form action="" class="corona-form__form">
+        <form action="form.php" class="corona-form__form">
           <div class="corona-form__line">
-            <input type="text" placeholder="Name*" required />
-            <input type="text" placeholder="Firma*" required />
+            <input type="text" name="name" placeholder="Name*" required />
+            <input type="text" name="firm" placeholder="Firma*" required />
           </div>
           <div class="corona-form__line">
-            <input type="email" placeholder="Email*" required />
+            <input type="email" name="email" placeholder="Email*" required />
             <input
               autocomplete="off"
               maxlength="12"
@@ -289,16 +299,32 @@
             />
           </div>
           <div class="corona-form__text-container">
-            <textarea class="corona-form__text" rows="5" required> </textarea>
+            <textarea class="corona-form__text" name="msg" rows="5" required>
+            </textarea>
           </div>
-          <span class="corona-form__checkbox-container">
+          <label class="container"
+            >Ich stimme zu, dass meine Angaben aus dem Kontaktformular zur
+            Beantwortung meiner Anfrage erhoben und verarbeitet werden. Die
+            Daten werden bei uns gespeichert bis Sie eine Anfrage auf Löschung
+            Ihrer Daten stellen. Hinweis: Sie können Ihre Einwilligung
+            jederzeitввввв für die Zukunft per E-Mail an berlin@covidzentrum.de
+            widerrufen. Detaillierte Informationen zum Umgang mit Nutzerdaten
+            finden Sie in unserer Datenschutzerklärung
+            <input
+              type="checkbox"
+              id="coronaCheckbox"
+              onclick="isCheckboxPresser()"
+            />
+            <span class="checkmark"></span>
+          </label>
+          <!-- <span class="corona-form__checkbox-container">
             <input
               class="styled-checkbox"
-              id="styled-checkbox-4"
+              id="coronaCheckbox"
               type="checkbox"
-              value="value4"
+              onClick="isCheckboxPresser()"
             />
-            <label for="styled-checkbox-4"
+            <label for="coronaCheckbox"
               >Ich stimme zu, dass meine Angaben aus dem Kontaktformular zur
               Beantwortung meiner Anfrage erhoben und verarbeitet werden. Die
               Daten werden bei uns gespeichert bis Sie eine Anfrage auf Löschung
@@ -307,7 +333,7 @@
               widerrufen. Detaillierte Informationen zum Umgang mit Nutzerdaten
               finden Sie in unserer Datenschutzerklärung</label
             >
-          </span>
+          </span> -->
           <button
             disabled
             class="corona-form__button"
@@ -319,23 +345,26 @@
         </form>
       </div>
     </section>
-    <section class="corona-footer">
-      <div class="corona-footer__container">
+    <footer class="corona-footer">
+      <div class="corona-footer__container" id="contacts">
         <div class="corona-footer__left-side">
           <img
             class="corona-footer__logo"
             src="https://via.placeholder.com/135x135"
-            alt="Lübeck Corona Test Footer Logo"
+            alt="Lübeck corona Test Footer Logo"
           />
           <ul class="corona-footer__left-list">
             <li class="corona-footer__left-item">
-              <a href="#"> Ссылка 1 </a>
+              <a href="corona.html">Impressum</a>
             </li>
             <li class="corona-footer__left-item">
-              <a href="#"> Ссылка 2 </a>
+              <a href="datenschutzbedingungen.html">Datenschutzbedingungen</a>
             </li>
             <li class="corona-footer__left-item">
-              <a href="#"> Ссылка 2 </a>
+              <a href="antworten.html"
+                >Häufige Fragen <br />
+                & antworten</a
+              >
             </li>
           </ul>
         </div>
@@ -352,7 +381,7 @@
             <li class="corona-footer__right-item">
               <p class="corona-footer__item-title address">Die Adresse</p>
               <p class="corona-footer__item-text">
-                Corona Testzentrum Lübeck<br />
+                impressum Testzentrum Lübeck<br />
                 Königstraße 57<br />
                 23552 Lübeck<br />
                 Im Lichthof, ehemals Königspassage
@@ -361,7 +390,7 @@
           </ul>
         </div>
       </div>
-    </section>
+    </footer>
   </body>
 
   <script>
@@ -374,5 +403,22 @@
         sendButton.disabled = true;
       }
     }
+
+    function scrollToElement(event) {
+      event.preventDefault();
+
+      let elementId = event.target.getAttribute("data-scroll-to");
+      let element = document.getElementById(elementId);
+      element.scrollIntoView({
+        block: "start",
+        behavior: "smooth",
+        inline: "center",
+      });
+    }
+
+    let scrollElements = document.querySelectorAll("[data-scroll-to]");
+    [].forEach.call(scrollElements, function (element) {
+      element.addEventListener("click", scrollToElement);
+    });
   </script>
 </html>
